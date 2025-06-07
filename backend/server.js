@@ -195,7 +195,7 @@ app.post('/api/coze-chat', async (req, res) => {
 
 // --- User Registration Route ---
 // 当前端向 '/api/register' 这个地址发送 POST 请求时，会执行这里的代码
-app.post('/api/register', async (req, res) => {
+app.post('/auth/register', async (req, res) => {
     try {
         // 从请求体中获取用户名和密码
         const { username, password } = req.body;
@@ -230,7 +230,7 @@ app.post('/api/register', async (req, res) => {
 
 // --- User Login Route ---
 // 当前端向 '/api/login' 这个地址发送 POST 请求时，会执行这里的代码
-app.post('/api/login', async (req, res) => {
+app.post('/auth/login', async (req, res) => {
     try {
         // 从请求体中获取用户名和密码
         const { username, password } = req.body;
